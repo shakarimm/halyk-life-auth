@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800&display=swap');
+@import "vars";
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: $color_text;
+  background: #f4f3f2;
+  img, svg{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+  }
+  b{
+    font-weight: 500;
+  }
+  a{
+    text-decoration: none;
+  }
+  button{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  p{
+    margin: 0;
+    & + p{
+      margin-top: 0.7em;
+    }
+  }
+}
+.container{
+  max-width: 1130px;
+  margin: 0 auto;
+}
+.title{
+  font-size: 42px;
+  font-weight: 700;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #e8e9ea;
+}
+.s-auth{
+  padding: 2% 0;
+  &__form-wrapper{
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 2px 12px rgb(0 0 0 / 14%);
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 50px 0 80px;
+    color: $color_primary;
+    border-radius: 8px;
+    position: relative;
+  }
+  &__form-error{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    color: #fff;
+    background: red;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    &__img-wrapper{
+      cursor: pointer;
+    }
+  }
+}
+.auth-form{
+  &__inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+  &__input-block{
+    width: 100%;
+    &+&{
+      margin-top: 20px;
+    }
+  }
+  &__input-block__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+  }
+  &__input{
+    resize: none;
+    border: solid 1px #dbdbde;
+    padding: 14px 20px;
+    font-size: inherit;
+    color: #424e68;
+    width: 100%;
+    border-radius: 0.4em;
+    transition: all 0.4s;
+  }
+  &__btn-wrapper{
+    padding: 0 20px;
+  }
+  &__btn{
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.95em 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.4em;
+    transition: all 0.4s;
+    outline: none !important;
+    color: #fff;
+    background: $color_primary;
+    border: solid 1px $color_primary;
+    box-shadow: 0px 2px 22px rgb(43 192 110 / 50%);
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+}
+.s-documents{
+  padding: 2% 0;
+  &__num{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 500;
+    color: $color_text;
+    span{
+      color: $color_primary;
+    }
+  }
+  &__btn{
+    width: 15%;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    padding: 0.55em 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.4em;
+    transition: all 0.4s;
+    outline: none !important;
+    color: #fff;
+    background: $color_primary;
+    border: solid 1px $color_primary;
+    box-shadow: 0px 2px 22px rgb(43 192 110 / 50%);
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+}
+.document-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.document-card{
+  background: #fff;
+  box-shadow: 0px 2px 12px rgb(0 0 0 / 14%);
+  border-radius: 8px;
+  padding: 14px 20px;
+  width: 45%;
+  margin-bottom: 35px;
+  &__input{
+    display: none;
+  }
+  &__label{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    background: $color_primary;
+    color: #fff;
+    font-weight: 300;
+  }
+  &__title{
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__file-type-name{
+    font-size: 15px;
+    font-weight: 300;
+  }
+  &__file-name-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  &__btn{
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    background: $color_primary;
+    color: #fff;
+    font-weight: 300;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: all .4s;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+}
